@@ -1,2 +1,23 @@
-<pre>loads</pre>
-<router-outlet />
+@if (loggedIn) { The user is logged in } @else { The user is not logged in }
+<p>--</p>
+@switch (accessLevel) { @case ('admin') {
+<p>Access level is 1</p>
+} @default {
+<p>Access level is unknown</p>
+} }
+<p>--</p>
+
+@for (user of users; track user.id) {
+{{ user.name }}
+} @empty { Empty list of users }
+
+<p>--</p>
+
+@defer (when true) {
+<ng-17-comment-list />
+} @loading { Loading… } @error { Loading failed :( } @placeholder {
+<img src="comments-placeholder.png" />
+}
+
+<p>--</p>
+<ng-17-comment-list expanded />
