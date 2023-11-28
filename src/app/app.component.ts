@@ -30,13 +30,4 @@ export class AppComponent {
     { name: 'John', id: 1 },
     { name: 'Jane', id: 2 }
   ];
-
-  constructor() {
-    // afterNextRender(
-    //   () => {
-    //     this.loggedIn = true;
-    //   },
-    //   { phase: AfterRenderPhase.MixedReadWrite }
-    // );
-  }
 }
